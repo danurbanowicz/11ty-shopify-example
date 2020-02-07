@@ -72,12 +72,12 @@ const productsQuery = `
 module.exports = function () {
   console.log('GETTING PRODUCTS')
 
-  return fetch(`https://${process.env.SHOPIFY_DOMAIN}/api/graphql`, {
+  return fetch(`https://chromika.myshopify.com/api/graphql`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'X-Shopify-Storefront-Access-Token': process.env.SHOPIFY_ACCESS_TOKEN
+      'X-Shopify-Storefront-Access-Token': '07abed2fd466657ce36462123ee0099a'
     },
     body: JSON.stringify({ query: productsQuery })
   })
